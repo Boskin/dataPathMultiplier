@@ -1,7 +1,8 @@
+/* Modified carry look-ahead adder that only adds 1 to the input */
 module incBy1#(parameter N = 4)(
-    output [N - 1:0] s,
-    output cOut,
-    input [N - 1:0] a
+    output [N - 1:0] s, // Signal equalling a + 1
+    output cOut, // Output carry if rollover occurs
+    input [N - 1:0] a // Input signal to be incremented
 );
     // Carries
     wire [N:1] c;
