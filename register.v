@@ -5,7 +5,7 @@ module register#(parameter N = 1)(
     input clr,
     input clk
 );
-    always@(posedge clk, clr) begin
+    always@(posedge clk, posedge clr) begin
         if(clr == 1) begin
             q <= {N{1'b0}};
         end else if(write == 1) begin
