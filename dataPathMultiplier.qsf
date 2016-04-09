@@ -46,3 +46,44 @@ set_global_assignment -name USE_GENERATED_PHYSICAL_CONSTRAINTS OFF -section_id e
 set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name LL_ROOT_REGION ON -section_id "Root Region"
+set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
+set_global_assignment -name VERILOG_FILE hexDisplayDecoder.v
+set_global_assignment -name VERILOG_FILE dataPathMultiplier.v
+set_global_assignment -name VERILOG_FILE notEqual.v
+set_global_assignment -name VERILOG_FILE incBy1.v
+set_global_assignment -name VERILOG_FILE register.v
+set_global_assignment -name VERILOG_FILE syncCounter.v
+set_global_assignment -name VERILOG_FILE claBlock.v
+set_global_assignment -name VERILOG_FILE buttonDebounce.v
+set_global_assignment -name TIMEQUEST_MULTICORNER_ANALYSIS ON
+set_global_assignment -name TIMEQUEST_DO_CCPP_REMOVAL ON
+set_global_assignment -name STRATIX_DEVICE_IO_STANDARD "2.5 V"
+set_location_assignment PIN_E3 -to a[3]
+set_location_assignment PIN_H7 -to a[2]
+set_location_assignment PIN_J7 -to a[1]
+set_location_assignment PIN_G5 -to a[0]
+set_location_assignment PIN_G4 -to b[3]
+set_location_assignment PIN_H6 -to b[2]
+set_location_assignment PIN_H5 -to b[1]
+set_location_assignment PIN_J6 -to b[0]
+set_location_assignment PIN_G21 -to clk
+set_location_assignment PIN_H2 -to evalButton
+set_location_assignment PIN_A15 -to productDisp[13]
+set_location_assignment PIN_E14 -to productDisp[12]
+set_location_assignment PIN_B14 -to productDisp[11]
+set_location_assignment PIN_A14 -to productDisp[10]
+set_location_assignment PIN_C13 -to productDisp[9]
+set_location_assignment PIN_B13 -to productDisp[8]
+set_location_assignment PIN_A13 -to productDisp[7]
+set_location_assignment PIN_F13 -to productDisp[6]
+set_location_assignment PIN_F12 -to productDisp[5]
+set_location_assignment PIN_G12 -to productDisp[4]
+set_location_assignment PIN_H13 -to productDisp[3]
+set_location_assignment PIN_H12 -to productDisp[2]
+set_location_assignment PIN_F11 -to productDisp[1]
+set_location_assignment PIN_E11 -to productDisp[0]
+set_global_assignment -name MISC_FILE "C:/altera/90/quartus/dataPathMultiplier/dataPathMultiplier.dpf"
