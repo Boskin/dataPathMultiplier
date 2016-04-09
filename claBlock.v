@@ -1,5 +1,6 @@
 module claBlock#(parameter N = 1)(
     output [N - 1:0] s,
+    output cOut,
     input [N - 1:0] a,
     input [N - 1:0] b,
     input cIn
